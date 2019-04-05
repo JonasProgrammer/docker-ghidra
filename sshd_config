@@ -1,8 +1,4 @@
-Port 22
-AddressFamily any
-ListenAddress ::
-
-PermitRootLoginno
+PermitRootLogin no
 StrictModes yes
 MaxAuthTries 6
 MaxSessions 10
@@ -12,6 +8,7 @@ PubkeyAuthentication yes
 AuthorizedKeysFile /etc/authorized_keys
 PasswordAuthentication no
 KerberosAuthentication no
+ChallengeResponseAuthentication no
 GSSAPIAuthentication no
 UsePAM yes
 
@@ -28,4 +25,4 @@ AcceptEnv LANG LC_*
 
 Subsystem       sftp    /usr/lib/openssh/sftp-server
 
-AllowGroup ghidra
+AllowGroups ghidra
