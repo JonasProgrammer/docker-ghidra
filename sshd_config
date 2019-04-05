@@ -1,0 +1,31 @@
+Port 22
+AddressFamily any
+ListenAddress ::
+
+PermitRootLoginno
+StrictModes yes
+MaxAuthTries 6
+MaxSessions 10
+
+PubkeyAuthentication yes
+
+AuthorizedKeysFile /etc/authorized_keys
+PasswordAuthentication no
+KerberosAuthentication no
+GSSAPIAuthentication no
+UsePAM yes
+
+AllowAgentForwarding yes
+AllowTcpForwarding no
+GatewayPorts no
+X11Forwarding yes
+PrintMotd no
+UsePrivilegeSeparation sandbox
+
+Banner none
+
+AcceptEnv LANG LC_*
+
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+AllowGroup ghidra
