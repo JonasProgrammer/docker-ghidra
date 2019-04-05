@@ -18,6 +18,6 @@ ssh -XC -p ${ACCESS_PORT} remote-hsot
 
 ## Variables
 
-Variable | Function
----------+----------
-`AUTHORIZED_KEYS` | Comma (`,`) separated list of ssh public keys to allow access.
+| Variable | Function |
+| --- | --- |
+| `AUTHORIZED_KEYS` | Comma (`,`) separated list of ssh public keys to allow access. |
